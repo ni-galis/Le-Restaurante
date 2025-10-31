@@ -1,0 +1,4 @@
+myriad pro    bold
+myriad pro    bold italic
+myriad pro  regular
+myriad pro italic regular, light

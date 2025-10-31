@@ -1,0 +1,262 @@
+@use "./zeroing.scss";
+
+@font-face {
+  font-family: "Myriad Bold Italic";
+  src: url("./../fonts/AnyConv.com__Myriad\ Bold\ Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "myriad-pro-light-italic";
+  src: url("./../fonts/myriad-pro-light-italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MYRIADPRO-BOLD.";
+  src: url("./../fonts/MYRIADPRO-BOLD.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url("./../fonts/MyriadPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MYRIADPRO-REGULAR";
+  src: url("./../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MYRIADPRO-SEMIBOLD";
+  src: url("./../fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+//? ------------------------------
+
+$bg-act: #f1ac11;
+$col-act: $bg-act;
+$bg-body: #282828;
+
+.active {
+  color: $col-act;
+  transition: 0.3s linear;
+
+  &:hover {
+    color: $col-act;
+  }
+}
+
+a {
+  color: #fff;
+  transition: 0.3s;
+
+  &:hover {
+    color: $col-act;
+  }
+}
+
+.none {
+  display: none !important;
+}
+
+//? /-----------------------------------
+
+body {
+  background-color: $bg-body;
+}
+
+////? ------------ CONTAINER --------------------
+
+.container {
+  max-width: 1940px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+//.container--sm {
+//  width: 1400px;
+//  padding: 0 10px;
+  //margin: 0 auto;
+//}
+
+//? ------------- NAV ---------------------
+.nav {
+  position: absolute;
+  top: 43px;
+  left: 100px;
+  z-index: 50;
+}
+
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  margin-left: -12px;
+
+}
+
+.nav__list {
+  display: flex;
+  gap: 55px;
+  margin-left: 410px;
+}
+
+.nav__link {
+  font-size: 22px;
+  font-family: "Myriad Bold Italic", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.05rem;
+  position: relative;
+
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $bg-act;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+//? ------------ HEADER ------------------------
+.header {}
+
+.header__content {
+  background-image: url(./../image/header/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1101px;
+  max-width: 1920px;
+}
+
+.header__row {
+  display: flex;
+  padding-top: 350px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.block-left {
+  position: absolute;
+  left: 45px;
+  top: 430px;
+  z-index: 1;
+  opacity: .4;
+  transition: .3s linear;
+
+  &:hover {
+    opacity: .8;
+    transform: scale(1.02);
+  }
+}
+
+.block-left__img {}
+
+.block-left__btn {
+  position: absolute;
+  top: 170px;
+  left: 145px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.block-center {
+  //width: 100%;
+  position: absolute;
+  left: 760px;
+  top: 370px;
+  z-index: 1;
+  transition: .3s linear;
+  opacity: .4;
+
+  &:hover {
+    opacity: .9;
+    transform: scale(1.02);
+  }
+}
+
+.block-center__img {}
+
+.block-center__btn {
+  position: absolute;
+  top: 175px;
+  left: 146px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.block-right {
+// width: 100%;
+  position: absolute;
+  left: 1440px;
+  top: 426px;
+  z-index: 1;
+  opacity: .4;
+  transition: .3s linear;
+
+  &:hover {
+    opacity: .8;
+    transform: scale(1.02);
+  }
+}
+
+.block-right__img {}
+
+.block-right__img:hover .block-center__img {
+  transition: .3s linear;
+  opacity: 0;
+}
+
+.block-right__btn {
+  position: absolute;
+  top: 175px;
+  left: 150px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1490px) {
+  .nav__list {
+    display: flex;
+    gap: 40px;
+    margin-right: 10rem;
+
+  }
+}

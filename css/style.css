@@ -1,0 +1,306 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/*------------------------------------*/
+@font-face {
+  font-family: "Myriad Bold Italic";
+  src: url("./../fonts/AnyConv.com__Myriad Bold Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "myriad-pro-light-italic";
+  src: url("./../fonts/myriad-pro-light-italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MYRIADPRO-BOLD.";
+  src: url("./../fonts/MYRIADPRO-BOLD.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url("./../fonts/MyriadPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MYRIADPRO-REGULAR";
+  src: url("./../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MYRIADPRO-SEMIBOLD";
+  src: url("./../fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.active {
+  color: #f1ac11;
+  transition: 0.3s linear;
+}
+.active:hover {
+  color: #f1ac11;
+}
+
+a {
+  color: #fff;
+  transition: 0.3s;
+}
+a:hover {
+  color: #f1ac11;
+}
+
+.none {
+  display: none !important;
+}
+
+body {
+  background-color: #282828;
+}
+
+.container {
+  max-width: 1940px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.nav {
+  position: absolute;
+  top: 43px;
+  left: 100px;
+  z-index: 50;
+}
+
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  margin-left: -12px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 55px;
+  margin-left: 410px;
+}
+
+.nav__link {
+  font-size: 22px;
+  font-family: "Myriad Bold Italic", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f1ac11;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+.header__content {
+  background-image: url(./../image/header/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1101px;
+  max-width: 1920px;
+}
+
+.header__row {
+  display: flex;
+  padding-top: 350px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.block-left {
+  position: absolute;
+  left: 45px;
+  top: 430px;
+  z-index: 1;
+  opacity: 0.4;
+  transition: 0.3s linear;
+}
+.block-left:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.block-left__btn {
+  position: absolute;
+  top: 170px;
+  left: 145px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.block-center {
+  position: absolute;
+  left: 760px;
+  top: 370px;
+  z-index: 1;
+  transition: 0.3s linear;
+  opacity: 0.4;
+}
+.block-center:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.block-center__btn {
+  position: absolute;
+  top: 175px;
+  left: 146px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.block-right {
+  position: absolute;
+  left: 1440px;
+  top: 426px;
+  z-index: 1;
+  opacity: 0.4;
+  transition: 0.3s linear;
+}
+.block-right:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.block-right__img:hover .block-center__img {
+  transition: 0.3s linear;
+  opacity: 0;
+}
+
+.block-right__btn {
+  position: absolute;
+  top: 175px;
+  left: 150px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1490px) {
+  .nav__list {
+    display: flex;
+    gap: 40px;
+    margin-right: 10rem;
+  }
+}
