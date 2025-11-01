@@ -92,12 +92,6 @@ body {
   overflow: hidden;
 }
 
-//.container--sm {
-//  width: 1400px;
-//  padding: 0 10px;
-//margin: 0 auto;
-//}
-
 //? ------------- NAV ---------------------
 .nav {
   position: absolute;
@@ -195,7 +189,6 @@ body {
 }
 
 .block-center {
-  //width: 100%;
   position: absolute;
   left: 760px;
   top: 370px;
@@ -218,7 +211,6 @@ body {
 }
 
 .block-right {
-  // width: 100%;
   position: absolute;
   left: 1440px;
   top: 426px;
@@ -394,18 +386,96 @@ body {
   top: 764px;
   z-index: 1;
 }
+
 //?------------ le-restaurante ----------
 
 .le-restaurante {}
 
-.container {}
+.le-restaurante__content {
+  background: url('./../image/about_us/LeRestaurante.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 490px;
+  position: relative;
+}
 
-.le-restaurante__content {}
+.le-restaurante__title {
+  font-size: 28px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: .09rem;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
 
-.rectangle__img {}
+.rectangle__img {
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: calc(100% - 50% - 196.4px);
 
-.sub__img {}
+}
 
-.le-restaurante__btn {}
+.log__img {
+  font-size: 28px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 747px;
+  top: 220px;
+  z-index: 1;
+  cursor: pointer;
+}
 
-.show-on__img {}
+.address__img {
+  font-size: 28px;
+    font-family: "Myriad Pro";
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: left;
+    position: absolute;
+    left: 1040px;
+    top: 220px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.le-restaurante__btn {
+  position: absolute;
+  left: 0px;
+  top: 298px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+.show-on__img {
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 0px;
+  top: 310px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
