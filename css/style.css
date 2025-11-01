@@ -297,10 +297,147 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 1490px) {
-  .nav__list {
-    display: flex;
-    gap: 40px;
-    margin-right: 10rem;
-  }
+.daily-menu__content {
+  padding-top: 70px;
+  background-color: #fff;
+  position: relative;
+  height: 1000px;
+  z-index: 1;
+}
+
+.daily-menu__title {
+  font-size: 42px;
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 400;
+  color: rgb(241, 172, 17);
+  letter-spacing: 0.09rem;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.suptitle__img {
+  margin-right: 14px;
+  margin-top: 3px;
+}
+
+.suptitle {
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.045rem;
+  position: absolute;
+  left: 513px;
+  top: 150px;
+  z-index: 1;
+}
+
+.menu-list {
+  max-width: 1000px;
+  margin-top: 100px;
+  margin: 82px 0px 0px 510px;
+}
+
+.item-1__img {
+  margin-right: 80px;
+  margin-bottom: 41px;
+}
+
+.item-3__img {
+  margin-right: 80px;
+  margin-bottom: 41px;
+}
+
+.item-5__img {
+  margin-right: 80px;
+  margin-bottom: 100px;
+}
+
+.frame__img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.assorted__img {
+  position: absolute;
+  left: 510px;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-family: "Myriad Pro";
+  color: #f1ac11;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.03rem;
+  position: absolute;
+  top: 651px;
+  left: 990px;
+  z-index: 1;
+}
+
+.frame__content-title {
+  max-width: 300px;
+  font-size: 24px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  font-style: italic;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 990px;
+  top: 677px;
+  z-index: 1;
+}
+
+.frame__content-text {
+  max-width: 320px;
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  color: rgb(212, 212, 212);
+  word-spacing: 0.076rem;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-style: italic;
+  text-align: left;
+  position: absolute;
+  left: 990px;
+  top: 750px;
+  z-index: 1;
+}
+
+.button__img {
+  position: absolute;
+  left: 991px;
+  top: 857px;
+  z-index: 1;
+}
+
+.button__txt {
+  position: absolute;
+  left: 1005px;
+  top: 867px;
+  z-index: 1;
+}
+
+.next-offer__img {
+  position: absolute;
+  left: 1433px;
+  top: 768px;
+  z-index: 1;
+}
+
+.arrow__img {
+  position: absolute;
+  left: 1512px;
+  top: 764px;
+  z-index: 1;
 }
