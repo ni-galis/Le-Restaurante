@@ -433,6 +433,7 @@ body {
   left: 1433px;
   top: 768px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .arrow__img {

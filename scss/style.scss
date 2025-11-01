@@ -153,7 +153,7 @@ body {
   opacity: 1;
 }
 
-//? ------------ HEADER ------------------------
+//? ------------ HEADER -----------
 
 .header__content {
   background-image: url(./../image/header/bg.jpg);
@@ -245,7 +245,7 @@ body {
   cursor: pointer;
 }
 
-//? -------------- daily-menu ---------------------
+//? -------------- daily-menu ----------
 
 .daily-menu__content {
   padding-top: 70px;
@@ -385,6 +385,7 @@ body {
   left: 1433px;
   top: 768px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .arrow__img {
@@ -393,3 +394,18 @@ body {
   top: 764px;
   z-index: 1;
 }
+//?------------ le-restaurante ----------
+
+.le-restaurante {}
+
+.container {}
+
+.le-restaurante__content {}
+
+.rectangle__img {}
+
+.sub__img {}
+
+.le-restaurante__btn {}
+
+.show-on__img {}
