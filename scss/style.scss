@@ -1,0 +1,1054 @@
+@use "./zeroing.scss";
+
+@font-face {
+  font-family: "Myriad Bold Italic";
+  src: url("./../fonts/AnyConv.com__Myriad\ Bold\ Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "myriad-pro-light-italic";
+  src: url("./../fonts/myriad-pro-light-italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MYRIADPRO-BOLD.";
+  src: url("./../fonts/MYRIADPRO-BOLD.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url("./../fonts/MyriadPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MYRIADPRO-REGULAR";
+  src: url("./../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MYRIADPRO-SEMIBOLD";
+  src: url("./../fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+//? ------------------------------
+
+$bg-act: #f1ac11;
+$col-act: $bg-act;
+$bg-body: #282828;
+
+.active {
+  color: $col-act;
+  transition: 0.3s linear;
+
+  &:hover {
+    color: $col-act;
+  }
+}
+
+a {
+  color: #fff;
+  transition: 0.3s;
+
+  &:hover {
+    color: $col-act;
+  }
+}
+
+.none {
+  display: none !important;
+}
+
+body {
+  background-color: $bg-body;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1940px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header-nav__menu {
+  max-width: 1400px;
+  width: 100%;
+  position: absolute;
+  top: 39px;
+  left: 151px;
+  z-index: 5;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav__logo {
+  margin-left: -70px;
+}
+
+.burger-icon {
+  display: block;
+  width: 40px;
+  height: 25px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+
+  span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    span {
+      transform: scale(0);
+
+      &:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+      }
+
+      &:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
+  }
+}
+
+.menu__list {
+  display: flex;
+  gap: 65px;
+  margin-right: 50px;
+}
+
+.menu__link {
+  font-size: 22px;
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: relative;
+
+  &:hover::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 2px;
+    background-color: $bg-act;
+  }
+}
+
+.menu__link.active::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  background-color: $bg-act;
+}
+
+@media (max-width: 1940px) {
+  .header-nav__menu {
+    left: 110px;
+  }
+
+  .menu__list {
+    display: flex;
+    gap: 65px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1720px) {
+  .menu__body {
+    margin-right: 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .menu__body {
+    margin-right: 9vw;
+  }
+
+  .menu__link {
+    font-size: 20px;
+  }
+
+  .menu__list {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu__link {
+    font-size: 18px;
+  }
+
+  .logo__img {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 990px) {
+  .menu__link {
+    font-size: 18px;
+  }
+
+  .menu__list {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 943px) {
+  .header-nav__logo {
+    max-width: 260px;
+  }
+
+  .menu__list {
+    gap: 35px;
+  }
+
+  .menu__link {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 820px) {
+  .header-nav__logo {
+    max-width: 240px;
+  }
+
+  .menu__list {
+    gap: 28px;
+  }
+
+  .menu__link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav__menu {
+    padding-top: 20px;
+  }
+
+  .logo__img {
+    margin-left: 70px;
+  }
+
+  .header-nav__menu {
+    top: 0px;
+    left: 0px;
+  }
+
+  .burger-icon {
+    display: block;
+    margin-right: 8vw;
+  }
+
+  .menu__body {
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    height: 500px;
+    width: 100%;
+    background-color: #d81b1b;
+    display: flex;
+    transition: .3s;
+    overflow: auto;
+  }
+
+  .active {
+    left: 0px;
+    transform: scale(1);
+
+  }
+
+  .menu__list {
+    flex-direction: column;
+    padding: 30px;
+    gap: 0;
+    margin: auto;
+  }
+
+  .menu__link {
+    display: block;
+    font-size: 30px;
+    line-height: 110px;
+    margin-bottom: 30px;
+
+    &:hover::after {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .menu__link.active::after {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .burger-icon {
+    width: 38px;
+    height: 20px;
+  }
+
+  .logo__img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo__img {
+    max-width: 80%;
+  }
+
+  .burger-icon {
+    width: 38px;
+    height: 22px;
+  }
+
+  .menu__link {
+    font-size: 28px;
+    line-height: 70px;
+    margin-bottom: 30px;
+  }
+
+  .menu__body {
+    height: 400px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo__img {
+    max-width: 70%;
+  }
+
+  .burger-icon {
+    width: 38px;
+    height: 20px;
+  }
+
+  .menu__body {
+    height: 380px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo__img {
+    max-width: 65%;
+  }
+
+  .burger-icon {
+    width: 45px;
+    height: 18px;
+    top: 0px;
+  }
+
+  .menu__link {
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .menu__body {
+    height: 330px;
+  }
+}
+
+//? ------------ HEADER -----------
+
+.header__content {
+  background-image: url(./../image/header/bg.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1103px;
+  max-width: 1920px;
+  margin-top: 0;
+  position: relative;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.block-left {
+  position: absolute;
+  left: 2.15vw;
+  top: 21vw;
+  z-index: 1;
+
+  opacity: .4;
+  transition: .3s linear;
+
+  &:hover {
+    opacity: .9;
+    transform: scale(1.02);
+  }
+}
+
+.block-left__img {
+  max-width: 22.65vw;
+  height: auto;
+
+}
+
+.block-left__btn {
+  position: absolute;
+  left: 7vw;
+  top: 170px;
+  top: 8.4vw;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.block-center {
+  position: absolute;
+  left: 37vw;
+  top: 18.1vw;
+  z-index: 1;
+  transition: .3s linear;
+  opacity: .8;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.block-center__img {
+  max-width: 22.65vw;
+  height: auto;
+}
+
+.block-center__btn {
+  position: absolute;
+  left: 7.2vw;
+  top: 8.55vw;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.block-right {
+  position: absolute;
+  left: 70.3vw;
+  top: 20.8vw;
+  z-index: 1;
+  transition: .3s linear;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: .9;
+    transform: scale(1.02);
+  }
+}
+
+.block-right__img {
+  max-width: 22.65vw;
+  height: auto;
+}
+
+.block-right__btn {
+  position: absolute;
+  left: 7.19vw;
+  top: 8.55vw;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1940px) {
+  .block-left {
+    position: absolute;
+    left: 1.7vw;
+    top: 22.5vw;
+    z-index: 1;
+  }
+
+  .block-left__btn {
+    position: absolute;
+    left: 7.5vw;
+    top: 8.8vw;
+    z-index: 1;
+  }
+
+  .block-center {
+    left: 38vw;
+    top: 19.3vw;
+  }
+
+  .block-center__btn {
+    position: absolute;
+    left: 7.6vw;
+    top: 9.1vw;
+    z-index: 1;
+  }
+
+  .block-right {
+    left: 74.5vw;
+    top: 22.3vw;
+  }
+
+  .block-right__img {
+    max-width: 22.65vw;
+    height: auto;
+  }
+
+  .block-right__btn {
+    position: absolute;
+    left: 7.6vw;
+    top: 9.1vw;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1820px) {
+  .header__content {
+    height: 990px;
+  }
+
+  @media (max-width: 1720px) {
+    .header__content {
+      height: 970px;
+    }
+  }
+
+  @media (max-width: 1620px) {
+    .header__content {
+      height: 940px;
+    }
+  }
+}
+
+@media (max-width: 1460px) {
+  .block-left__btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 37%;
+  }
+
+  .block-center__btn {
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 37%;
+  }
+
+  .block-right__btn {
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 37%;
+  }
+
+  .header__content {
+    height: 840px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header__content {
+    height: 700px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .block-left__btn {
+    max-width: 40%;
+  }
+
+  .block-center__btn {
+    top: 8.9vw;
+    max-width: 40%;
+  }
+
+  .block-right__btn {
+    max-width: 40%;
+    top: 8.8vw;
+  }
+
+  .header__content {
+    height: 680px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header__content {
+    height: 600px;
+  }
+
+  .header__row {
+    top: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .header__content {
+    height: 560px;
+  }
+
+  .header__row {
+    top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-right {
+    left: 73.5vw;
+  }
+
+  .header__content {
+    height: 450px;
+  }
+
+  .header__row {
+    top: 10px;
+  }
+}
+
+@media (max-width: 669px) {
+  .header__content {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .block-right {
+    left: 71.5vw;
+  }
+}
+
+@media (max-width: 575px) {
+  .header__content {
+    height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger-icon {
+    width: 38px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .block-right {
+    left: 70.5vw;
+    top: 22.3vw;
+  }
+
+  .header__row {
+    margin-top: 45px;
+  }
+
+  .header__content {
+    height: 250px;
+  }
+}
+
+//? -------------- daily-menu ----------
+
+.daily-menu__content {
+  padding-top: 70px;
+  background-color: #fff;
+  position: relative;
+  height: 1000px;
+  z-index: 1;
+}
+
+.daily-menu__title {
+  font-size: 42px;
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 400;
+  color: rgb(241, 172, 17);
+  letter-spacing: .09rem;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.suptitle__img {
+  margin-right: 14px;
+  margin-top: 3px;
+}
+
+.suptitle {
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .045rem;
+  position: absolute;
+  left: 513px;
+  top: 150px;
+  z-index: 1;
+}
+
+.menu-list {
+  max-width: 1000px;
+  margin-top: 100px;
+  margin: 82px 0px 0px 510px;
+
+}
+
+.item-1__img {
+  margin-right: 80px;
+  margin-bottom: 41px;
+}
+
+.item-3__img {
+  margin-right: 80px;
+  margin-bottom: 41px;
+}
+
+.item-5__img {
+  margin-right: 80px;
+  margin-bottom: 100px;
+}
+
+.frame__img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.assorted__img {
+  position: absolute;
+  left: 510px;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-family: "Myriad Pro";
+  color: $col-act;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .03rem;
+  position: absolute;
+  top: 651px;
+  left: 990px;
+  z-index: 1;
+}
+
+.frame__content-title {
+  max-width: 300px;
+  font-size: 24px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  font-style: italic;
+  letter-spacing: .08rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 990px;
+  top: 677px;
+  z-index: 1;
+}
+
+.frame__content-text {
+  max-width: 320px;
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  color: rgb(212, 212, 212);
+  word-spacing: .076rem;
+  letter-spacing: .02em;
+  line-height: 1.2;
+  font-style: italic;
+  text-align: left;
+
+  position: absolute;
+  left: 990px;
+  top: 750px;
+  z-index: 1;
+}
+
+.button__img {
+  position: absolute;
+  left: 991px;
+  top: 857px;
+  z-index: 1;
+}
+
+.button__txt {
+  position: absolute;
+  left: 1005px;
+  top: 867px;
+  z-index: 1;
+}
+
+.next-offer__img {
+  position: absolute;
+  left: 1433px;
+  top: 768px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.arrow__img {
+  position: absolute;
+  left: 1512px;
+  top: 764px;
+  z-index: 1;
+}
+
+//?------------ le-restaurante ----------
+
+.le-restaurante__content {
+  background: url('./../image/about_us/LeRestaurante.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 490px;
+  position: relative;
+}
+
+.le-restaurante__title {
+  font-size: 28px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: .09rem;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.rectangle__img {
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: calc(100% - 50% - 196.4px);
+
+}
+
+.log__img {
+  font-size: 28px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 747px;
+  top: 220px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.address__img {
+  font-size: 28px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 1040px;
+  top: 220px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.le-restaurante__btn {
+  position: absolute;
+  left: 0px;
+  top: 298px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+.show-on__img {
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 0px;
+  top: 310px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+//? -------- footer ---------------
+
+.footer__row {
+  display: flex;
+  gap: 100px;
+  position: relative;
+  background-color: #000;
+  background: url('./../image/footer/footer-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 275px;
+  position: relative;
+}
+
+.footer-left {
+  display: flex;
+  gap: 86px;
+  position: absolute;
+  left: 397px;
+  top: 77px;
+  z-index: 1;
+  line-height: 1.22;
+}
+
+.list__title {
+  font-size: 22px;
+  font-family: "Myriad Pro";
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 16px;
+  letter-spacing: .05rem;
+}
+
+.list__item {
+  font-size: 17px;
+  font-family: "Myriad Pro";
+  color: rgb(187, 187, 187);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: .04rem;
+}
+
+.footer-right__title {
+  font-size: 22px;
+  font-family: "Myriad Pro";
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: .06rem;
+  position: absolute;
+  top: 74px;
+  left: 1112px;
+  z-index: 1;
+}
+
+
+.post {
+  display: flex;
+  position: absolute;
+  top: 140px;
+  left: 1086px;
+  gap: 23px;
+  z-index: 1;
+}
+
+.email-input {
+  background-color: #646361;
+  opacity: 0.6;
+  width: 223px;
+  height: 32px;
+  z-index: 1;
+  color: #15ff00;
+  padding: 0 20px;
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 12px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 15px;
+    letter-spacing: .04rem;
+    cursor: pointer;
+  }
+}
+
+.footer-button__img {
+  border-radius: 2px;
+  width: 90px;
+  height: 32px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+.but-txt {
+  font-size: 14px;
+  font-family: "Myriad Pro";
+  color: rgb(43, 43, 43);
+  color: #fff;
+  background-color: transparent;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  top: 6px;
+  left: 268px;
+  z-index: 1;
+  cursor: pointer;
+}
