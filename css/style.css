@@ -1319,57 +1319,6 @@ body.lock {
   position: relative;
 }
 
-.le-restaurante__title {
-  font-size: 28px;
-  font-family: "Myriad Pro";
-  color: rgb(0, 0, 0);
-  font-style: italic;
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 0.09rem;
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 1;
-}
-
-.rectangle__img {
-  max-width: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: calc(50% - 196.4px);
-}
-
-.log__img {
-  font-size: 28px;
-  font-family: "Myriad Pro";
-  color: rgb(0, 0, 0);
-  font-style: italic;
-  text-transform: uppercase;
-  text-align: left;
-  position: absolute;
-  left: 747px;
-  top: 220px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.address__img {
-  font-size: 28px;
-  font-family: "Myriad Pro";
-  color: rgb(0, 0, 0);
-  font-style: italic;
-  text-transform: uppercase;
-  text-align: left;
-  position: absolute;
-  left: 1040px;
-  top: 220px;
-  z-index: 1;
-  cursor: pointer;
-}
-
 .le-restaurante__btn {
   position: absolute;
   left: 0px;
